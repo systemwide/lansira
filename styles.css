@@ -1,0 +1,76 @@
+body {
+  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  font-size: 100%;
+  background-color: #d9d9d9;
+}
+
+h3  {
+  color: #BC472F;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+#status {
+  /* avoid an excessively wide status text */
+  white-space: pre;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 250px;
+  max-width: 600px;
+}
+
+legend{
+  color: #BC472F;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.setAdder {
+  display: inline;
+  background-color: #489E25;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  vertical-align: middle;
+
+}
+
+.setAdder:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button {
+  display: inline;
+  background-color: #3463af;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.button:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+input, button {
+  vertical-align: middle;
+
+}
+#main_ui {
+  padding: 5px;
+}
+hr.top_line{
+  border-top: 4px double #8c8b8b;
+}
