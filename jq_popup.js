@@ -1,4 +1,4 @@
-/*var tabLists = 
+var tabLists = 
 {
      "Work" : [ "http://www.slack.com", "http://www.salesforce.com", "http://www.apple.com" ],
 
@@ -6,18 +6,31 @@
 
      "Research" : [ "https://www.wikipedia.org/", "https://translate.google.com/", "https://github.com/systemwide/" ]
 };
-*/
 
-document.addEventListener('DOMContentLoaded', buildList);
 
-function buildList() {
-     var list = document.getElementsByClassName("button");
+$(document).ready(function(){
 
-     for(var i = 0; i < list.length;i++)
-     {
-          list[i].addEventListener("click", tabMaker);
-     }
-};//buildList
+	$.each(tabLists, function( k, v ){
+		var element = $('<input type="button"/>');
+		var checkbox = $('<input type="checkbox"/>');
+		$(element).attr({"type":"button", "class": "tabSetButton", "id": k, "value": k });
+		$(checkbox).attr({"class": "deleteCheckBox", "id": k, "value": k});
+		$("#tabSetButtons").append(element);
+		$("#deleteSet").append(checkbox);
+		//alert(element);
+	});
+
+	$("#edit").hide();
+
+	$("#expandCollapse").click(function(){
+		$("#edit").slideToggle(500);
+	});
+
+	$(".tabSetButton").on("click", tabMaker);
+
+	
+
+}); //end document.ready
 
 
 function tabMaker() {
@@ -29,13 +42,3 @@ function tabMaker() {
 // and which corresponds to one the url lists below:
      urls.forEach(url => chrome.tabs.create({url}))
 };//tabMaker
-
-/*
-// first attempt to automate list of buttons
-Object.keys(tabLists).forEach(addButton(key)
-{
-     // add a button for each key
-
-
-})
-*/

@@ -3,54 +3,75 @@
  This page is shown when the extension button is clicked, because the
  "browser_action" field in manifest.json contains the "default_popup" key with
  value "popup.html".
- -->
+-->
 <html>
-  <head>
-    <title>Getting Started Extension's Popup</title>
+<head>
+  <title>Getting Started Extension's Popup</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="popup.js"></script>
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="jq_popup.js"></script>
 
-    <link  rel="stylesheet" href="styles.css"
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="popup.js"></script>
-  </head>
-  <body>
-    <h3 id="status">Lansira Tab Manager</h3>
-    <hr class="top_line">
+  <link  rel="stylesheet" href="styles.css"
+  <!--
+  - JavaScript and HTML must be in separate files: see our Content Security
+  - Policy documentation[1] for details and explanation.
+  -
+  - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+-->
+<script src="popup.js"></script>
+</head>
+<body>
+  <h3 id="status">Lansira Tab Manager</h3>
+  <hr class="top_line">
 
-    <div id="main_ui">
+  <div id="main_ui">
 
-    <button class="setAdder" id="setAdder">Add/Edit Tabs</button>
+
     <form>
-      <fieldset>
+      <fieldset id = "tabSetButtons">
         <legend>Your Tab Sets</legend>
-      <input type="button" id="button1" class="button" value="Work"><br/>
+        <!- THIS IS WHERE JQUERY CREATES tabSetButtons>
+      </fieldset>
+    </form>
+  </div>
 
-      <input type="button" id="button2" class="button" value="School"><br/>
+  <button class="optionsButton" id="expandCollapse">More Options</button>
 
-      <input type="button" id="button3" class="button" value="Research"><br/>
+  <div>
+    <hr class="top_line">
+  </div>
+
+
+<div class="options" id="edit">
+
+
+  <form>
+    <fieldset id = "addSet">
+      <legend>Add another tab set</legend>
+
+      <input type="text" id="newSetName" placeholder="New Set Name">
+      <input type = "button" class="setAdder" id="setAdder" value="Add/Edit Sets" title="Create a new tab set using your currently open tabs"></button>
+
+    </fieldset>
+  </form>
+
+    <form>
+      <fieldset id = "deleteSet">
+        <legend>Delete a set</legend>
+        
+        <input type = "button" class="setDeleter" id="setDeleter" value="Delete Selected Sets"></button>
       </fieldset>
     </form>
 
-    </div>
+  <div>
+    <hr class="top_line">
 
-    <div></div>
+  </div>
+</div> <!-end options class div>
+  <img id="image-result" hidden>
 
-    <div>
-          <hr class="top_line">
+</body>
 
-    </div>
 
-    <img id="image-result" hidden>
-
-  </body>
-
-  
 </html>
 

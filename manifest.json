@@ -2,14 +2,14 @@
 	"name": "Lansira Tab Manager",
 	"description": "Easily manage and launch tab sets from the menu bar",
 	"version": "0.1",
-	"background_page": "background.html",
+	
 
 	"background": {
 		"scripts": ["background.js"]
 	},
 
 	"browser_action": {
-		"default_icon": "images/clipper_ship.png",
+		"default_icon": "images/launch.png",
 		"default_popup": "popup.html",
 		"default_title": "Lansira Tab Manager"
 	},
