@@ -23,7 +23,7 @@ p   {
   white-space: pre;
   text-overflow: ellipsis;
   overflow: hidden;
-  min-width: 250px;
+  min-width: 300px;
   max-width: 600px;
 }
 
@@ -50,8 +50,14 @@ legend{
 
 }
 
-.setAdder:hover{
+.setAdder:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.setAdder:active  {
+  background-color: #2f6718;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .setDeleter {
@@ -70,8 +76,14 @@ legend{
 
 }
 
-.setDeleter:hover{
+.setDeleter:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.setDeleter:active  {
+  background-color:  #4d0000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .button, .tabSetButton {
@@ -79,7 +91,7 @@ legend{
   background-color: #3463af;
   border: none;
   color: white;
-  padding: 12px 28px;
+  padding: 8px 28px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -87,6 +99,18 @@ legend{
   margin: 4px 2px;
   cursor: pointer;
   vertical-align: middle;
+}
+
+.button, .tabSetButton:active  {
+  background-color: #192f54;
+  box-shadow: 0 5px #666;
+  transform: transalteY(4px);
+}
+
+.optionsButton:active {
+  background-color: #843221;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .optionsButton {
@@ -106,6 +130,12 @@ legend{
 
 .button:hover, .tabSetButton:hover, .optionsButton:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+fieldset {
+  margin: auto;
+  width: 60%;
+  float:;
 }
 
 button[title] {

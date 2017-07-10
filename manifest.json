@@ -1,7 +1,7 @@
 {
 	"name": "Lansira Tab Manager",
 	"description": "Easily manage and launch tab sets from the menu bar",
-	"version": "0.1",
+	"version": "0.3",
 	
 
 	"background": {
@@ -14,9 +14,14 @@
 		"default_title": "Lansira Tab Manager"
 	},
 	
-	"optional_permissions": ["tabs"],
+	"optional_permissions": [
+		"tabs"
+	],
 
-	"permissions": [ "notifications", "tabs" ],
+	"permissions": [ 
+		"notifications", 
+		"tabs",
+		"storage" ],
 
 	"manifest_version": 2
 }
