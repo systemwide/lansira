@@ -45,9 +45,16 @@ $(document).ready(function main(){
 		var checkbox = $('<input type="checkbox"/>');
 		$(element).attr({"type":"button", "class": "tabSetButton", "id": k, "value": k });
 		$(checkbox).attr({"class": "deleteCheckBox", "id": k, "value": k});
+		var label = $("<label>").text(k);
+		var br = $("<br>");
+		
+
+		
 		$("#tabSetButtons").append(element);
 		console.log("Adding tab " + k);
 		$("#deleteSet").append(checkbox);
+		$("#deleteSet").append(label);
+		$("#deleteSet").append(br);
 		
 	});
 
@@ -109,6 +116,7 @@ function createNewSet(){
 		if(!data.userSets){
 			var us = "userSets";
 			data[us] = {};
+
 		}
 		
 	// assign updated userSets (from createHelper) to passedData, then send passedData along to newSetStorage

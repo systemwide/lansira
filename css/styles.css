@@ -23,7 +23,7 @@ p   {
   white-space: pre;
   text-overflow: ellipsis;
   overflow: hidden;
-  min-width: 300px;
+  min-width: 240px;
   max-width: 600px;
 }
 
@@ -39,11 +39,11 @@ legend{
   background-color: #489E25;
   border: none;
   color: white;
-  padding: 8px 20px;
+  padding: 6px 18px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 12px;
   margin: 10px 10px;
   cursor: pointer;
   vertical-align: middle;
@@ -65,11 +65,11 @@ legend{
   background-color: maroon;
   border: none;
   color: white;
-  padding: 8px 20px;
+  padding: 6px 18px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 12px;
   margin: 10px 10px;
   cursor: pointer;
   vertical-align: middle;
@@ -91,11 +91,11 @@ legend{
   background-color: #3463af;
   border: none;
   color: white;
-  padding: 8px 28px;
+  padding: 5px 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 12px;
   margin: 4px 2px;
   cursor: pointer;
   vertical-align: middle;
@@ -118,7 +118,7 @@ legend{
   background-color: #BC472F;
   border: none;
   color: white;
-  padding: 6px 14px;
+  padding: 4px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -134,7 +134,7 @@ legend{
 
 fieldset {
   margin: auto;
-  width: 60%;
+  width: 50%;
   float:;
 }
 
@@ -150,4 +150,9 @@ input, button {
 }
 hr.top_line{
   border-top: 4px double #8c8b8b;
+}
+
+label {
+  font-size: 10px;
+  font-family: "Arial Black", Gadget, sans-serif;
 }
