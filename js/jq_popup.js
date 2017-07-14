@@ -54,7 +54,27 @@ $(document).ready(function main(){
 
 	$("#addSet").submit(createNewSet);
 
-// ****************************** End fully functiona section
+	$("#deleteSet").submit(function(e){
+		var deleteList = [];
+		console.log("submitted!");
+		$('input[type="checkbox"]:checked').each(function(){
+			deleteList.push($(this).val());
+			
+
+		});
+		console.log("Delete List ==> ", deleteList);
+		if(deleteList){
+
+			deleteSets(deleteList);
+		}
+		return false;
+	});
+
+function deleteSets(deleteList){
+	var list = deleteList;
+	console.log("Value passed to deleteSets function ==> ", list);
+
+};
 
 function createHelper(value, callback){
 	var name = $("#newSetName").val();
