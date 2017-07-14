@@ -1,7 +1,4 @@
 
-
-
-
 var storage = chrome.storage.sync;
 
 var tabLists = {};
@@ -25,20 +22,7 @@ window.onload = function (){
 	
 $(document).ready(function main(){
 
-/*********************************** NEW FUNCTION NEEDS WORK
-//check to see if there exists an object in chrome.storage which contains user sets
-//else use default sets
-	chrome.storage.sync.get("defaults", function assign(result){
-		var tabLists = result;
-		console.log(result);
-	});
-	if(tabLists.length() === 0){
-	alert("empty!!");
-	tabLists = defaultTabLists;
-	};
-// ***********************************/
 
-// ********************************  DONT FUCK WITH THIS CODE BELOW
 	$.each(tabLists, function creatTabListButtons( k, v ){
 		var element = $('<input type="button"/>');
 
@@ -67,6 +51,8 @@ $(document).ready(function main(){
 	$(".tabSetButton").on("click", tabMaker);
 
 	$("#setAdder").on("click", createNewSet);
+
+	$("#addSet").submit(createNewSet);
 
 // ****************************** End fully functiona section
 
