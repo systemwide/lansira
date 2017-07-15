@@ -67,13 +67,20 @@ $(document).ready(function main(){
 
 			deleteSets(deleteList);
 		}
-		return false;
+	//	return false;
 	});
 
 function deleteSets(deleteList){
 	var list = deleteList;
-	console.log("Value passed to deleteSets function ==> ", list);
+	console.log("Value passed to deleteSets function ==> ", list); // value passed successfully
 
+	var passedData = {};
+	//retrieve existing userSets
+	chrome.storage.sync.get("userSets", function(data) {
+		console.log("User Sets Gotten by *deleteSets* ==> ", data);
+		deleteList.forEach(element => delete data.userSets[element]);
+		newSetStorage(data);
+	});
 };
 
 function createHelper(value, callback){
@@ -122,7 +129,6 @@ function createNewSet(){
 		if(!data.userSets){
 			var us = "userSets";
 			data[us] = {};
-
 		}
 		
 	// assign updated userSets (from createHelper) to passedData, then send passedData along to newSetStorage
