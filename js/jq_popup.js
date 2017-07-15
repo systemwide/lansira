@@ -10,7 +10,7 @@ window.onload = function (){
 
 	storage.get(null, function (data) { 
 		console.log(data);
-		if(data.userSets){
+		if(data.userSets && Object.keys(data.userSets).length !== 0){
 			tabLists = data.userSets;
 			console.log("using user defined tab sets");
 		}else{
@@ -70,6 +70,9 @@ $(document).ready(function main(){
 	//	return false;
 	});
 
+
+//*********************** BEGIN NAMED FUNCTION DEFINITIONS *******************************
+
 function deleteSets(deleteList){
 	var list = deleteList;
 	console.log("Value passed to deleteSets function ==> ", list); // value passed successfully
@@ -79,6 +82,7 @@ function deleteSets(deleteList){
 	chrome.storage.sync.get("userSets", function(data) {
 		console.log("User Sets Gotten by *deleteSets* ==> ", data);
 		deleteList.forEach(element => delete data.userSets[element]);
+
 		newSetStorage(data);
 	});
 };
@@ -90,7 +94,6 @@ function createHelper(value, callback){
 	var list = [];
 	var uSets = value;
 	if(uSets){
-
 	
 /* the following block of code calls chrome.tabs.query, an asynchronous function to get values from all open tabs in the
 active window. It then creates an array named "list" which is an array of strings of the URLS for each tab in active window.
