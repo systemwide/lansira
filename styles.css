@@ -1,0 +1,158 @@
+body {
+  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  font-size: 100%;
+  background-color: #d9d9d9;
+}
+
+
+/* original Lansira text color: #BC472F */
+h3  {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+p   {
+  color: black;
+  text-align: center;
+  font-size:8pt;
+}
+#status {
+  /* avoid an excessively wide status text */
+  white-space: pre;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 240px;
+  max-width: 600px;
+}
+
+legend{
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.setAdder {
+  display: inline;
+  background-color: #489E25;
+  border: none;
+  color: white;
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 10px 10px;
+  cursor: pointer;
+  vertical-align: middle;
+
+}
+
+.setAdder:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.setAdder:active  {
+  background-color: #2f6718;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.setDeleter {
+  display: inline;
+  background-color: maroon;
+  border: none;
+  color: white;
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 10px 10px;
+  cursor: pointer;
+  vertical-align: middle;
+
+}
+
+.setDeleter:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.setDeleter:active  {
+  background-color:  #4d0000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button, .tabSetButton {
+  display: inline;
+  background-color: #3463af;
+  border: none;
+  color: white;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.button, .tabSetButton:active  {
+  background-color: #192f54;
+  box-shadow: 0 5px #666;
+  transform: transalteY(4px);
+}
+
+.optionsButton:active {
+  background-color: #843221;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.optionsButton {
+  display: inline;
+  background-color: #BC472F;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 6px 2px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.button:hover, .tabSetButton:hover, .optionsButton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+fieldset {
+  margin: auto;
+  min-width: 40%;
+  float:;
+}
+
+button[title] {
+  font-size:14pt;
+}
+input, button {
+  vertical-align: middle;
+
+}
+#main_ui {
+  padding: 5px;
+}
+hr.top_line{
+  border-top: 4px double #8c8b8b;
+}
+
+label {
+  font-size: 10px;
+  font-family: "Arial Black", Gadget, sans-serif;
+}

@@ -9,13 +9,13 @@ window.onload = function (){
 	//user sets -> userSets
 
 	storage.get(null, function (data) { 
-		console.log(data);
+		//	console.log(data);
 		if(data.userSets && Object.keys(data.userSets).length !== 0){
 			tabLists = data.userSets;
-			console.log("using user defined tab sets");
+		//	console.log("using user defined tab sets");
 		}else{
 			tabLists = data.defaultKeys;
-			console.log("using default tab sets");
+		//	console.log("using default tab sets");
 		}
 		
 	});
@@ -35,10 +35,10 @@ $(document).ready(function main(){
 
 		
 		$("#tabSetButtons").append(element);
-		console.log("Adding tab " + k);
-		$("#deleteSet").append(checkbox);
-		$("#deleteSet").append(label);
-		$("#deleteSet").append(br);
+		//	console.log("Adding tab " + k);
+		$("#deleteSetFieldSet").append(checkbox);
+		$("#deleteSetFieldSet").append(label);
+		$("#deleteSetFieldSet").append(br);
 		
 	});
 
@@ -56,13 +56,13 @@ $(document).ready(function main(){
 
 	$("#deleteSet").submit(function(e){
 		var deleteList = [];
-		console.log("submitted!");
+	//	console.log("submitted!");
 		$('input[type="checkbox"]:checked').each(function(){
 			deleteList.push($(this).val());
 			
 
 		});
-		console.log("Delete List ==> ", deleteList);
+	//	console.log("Delete List ==> ", deleteList);
 		if(deleteList){
 
 			deleteSets(deleteList);
@@ -75,12 +75,12 @@ $(document).ready(function main(){
 
 function deleteSets(deleteList){
 	var list = deleteList;
-	console.log("Value passed to deleteSets function ==> ", list); // value passed successfully
+	// console.log("Value passed to deleteSets function ==> ", list); // value passed successfully
 
 	var passedData = {};
 	//retrieve existing userSets
 	chrome.storage.sync.get("userSets", function(data) {
-		console.log("User Sets Gotten by *deleteSets* ==> ", data);
+	//	console.log("User Sets Gotten by *deleteSets* ==> ", data);
 		deleteList.forEach(element => delete data.userSets[element]);
 
 		newSetStorage(data);
@@ -89,7 +89,7 @@ function deleteSets(deleteList){
 
 function createHelper(value, callback){
 	var name = $("#newSetName").val();
-	console.log("Name: ", name);
+//	console.log("Name: ", name);
 	var obj = {};
 	var list = [];
 	var uSets = value;
@@ -108,10 +108,10 @@ createNewSet function
 		},	function(tabs)	{
 			// iterate over tabs object, get each url and push it to list[]
 				tabs.forEach(tab => list.push(tab.url));
-				console.log("List contents ==>", list);
+	//			console.log("List contents ==>", list);
 			// update userSets object with new key value pair, {name : list[]}
 				uSets.userSets[name] = list;
-				console.log("Value of uSets ==>", uSets);
+	//			console.log("Value of uSets ==>", uSets);
 			// invoke the fuction's callback sending the updated userSet object to the final step	
 				callback(uSets);
 
@@ -128,7 +128,7 @@ function createNewSet(){
 	var passedData = {};
 	//retrieve existing userSets
 	chrome.storage.sync.get("userSets", function(data) {
-		console.log("User Sets Gotten ==> ", data);
+	//	console.log("User Sets Gotten ==> ", data);
 		if(!data.userSets){
 			var us = "userSets";
 			data[us] = {};
@@ -148,13 +148,13 @@ function createNewSet(){
 function newSetStorage(updatedUserSet){
 	// if the passed data is not null or undefined, store it back in 	
 	if(updatedUserSet){
-		console.log("newSetStorage received this object ==> ", updatedUserSet);
+	//	console.log("newSetStorage received this object ==> ", updatedUserSet);
 		chrome.storage.sync.set(updatedUserSet, function(){
 			if (chrome.runtime.error) {
     		console.log("Runtime error.");
     		}
 			chrome.storage.sync.get(null, function(data){
-				console.log("New contents of storage area after functions ==> ", data);
+	//			console.log("New contents of storage area after functions ==> ", data);
 			});
 		});
 	}//end if
@@ -163,9 +163,9 @@ function newSetStorage(updatedUserSet){
 
 function tabMaker() {
      var buttonName = this.value;
-     console.log(buttonName);
+//     console.log(buttonName);
      var urls = tabLists[buttonName];
-     console.log(tabLists); // returns undefined...why?   
+//     console.log(tabLists); // returns undefined...why?   
 
 // iterate through a list whose name is derived from 
 // the button clicked (the value attribute of the button)
