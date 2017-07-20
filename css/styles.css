@@ -1,5 +1,5 @@
 body {
-  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  font-family: sans-serif;
   font-size: 100%;
   background-color: #d9d9d9;
 }
@@ -7,14 +7,13 @@ body {
 
 /* original Lansira text color: #BC472F */
 h3  {
-  color: black;
-  text-align: center;
+  color: #000;
   font-weight: bold;
-  font-family: "Arial Black", Gadget, sans-serif;
+  font-family: sans-serif;
 }
 
 p   {
-  color: black;
+  color: #000;
   text-align: center;
   font-size:8pt;
 }
@@ -28,10 +27,10 @@ p   {
 }
 
 legend{
-  color: black;
+  color: #000;
   text-align: center;
   font-weight: bold;
-  font-family: "Arial Black", Gadget, sans-serif;
+  font-family: sans-serif;
 }
 
 .setAdder {
@@ -39,14 +38,15 @@ legend{
   background-color: #489E25;
   border: none;
   color: white;
-  padding: 6px 18px;
+  padding: 2px 6px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
-  margin: 10px 10px;
+  margin: 2px 2px;
   cursor: pointer;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
+  float: right;
 
 }
 
@@ -62,10 +62,10 @@ legend{
 
 .setDeleter {
   display: inline;
-  background-color: maroon;
+  background-color: #800000;
   border: none;
-  color: white;
-  padding: 6px 18px;
+  color: #fff;
+  padding: 3px 18px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -90,15 +90,16 @@ legend{
   display: inline;
   background-color: #3463af;
   border: none;
-  color: white;
-  padding: 5px 25px;
+  color: #fff;
+  padding: 3px 10px;
   text-align: center;
-  text-decoration: none;
+  text-decoration: center;
   display: inline-block;
   font-size: 12px;
   margin: 4px 2px;
   cursor: pointer;
-  vertical-align: middle;
+  width:70%;
+
 }
 
 .button, .tabSetButton:active  {
@@ -118,11 +119,11 @@ legend{
   background-color: #BC472F;
   border: none;
   color: white;
-  padding: 4px 12px;
+  padding: 3px 8px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
+  font-size: 10px;
   margin: 4px 2px;
   cursor: pointer;
   vertical-align: middle;
@@ -132,22 +133,18 @@ legend{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-fieldset {
-  margin: auto;
-  width: 50%;
-  float:;
-}
 
 button[title] {
-  font-size:14pt;
+  font-size:12pt;
 }
+
 input, button {
   vertical-align: middle;
+}
+legend{
+  text-align:left;
+}
 
-}
-#main_ui {
-  padding: 5px;
-}
 hr.top_line{
   border-top: 4px double #8c8b8b;
 }
