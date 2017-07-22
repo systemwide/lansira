@@ -22,7 +22,7 @@ p   {
   white-space: pre;
   text-overflow: ellipsis;
   overflow: hidden;
-  min-width: 240px;
+  min-width: 220px;
   max-width: 600px;
 }
 
@@ -45,7 +45,6 @@ legend{
   font-size: 12px;
   margin: 2px 2px;
   cursor: pointer;
-  /*vertical-align: middle;*/
   float: right;
 
 }
@@ -91,15 +90,14 @@ legend{
   background-color: #3463af;
   border: none;
   color: #fff;
-  padding: 3px 10px;
+  padding: 3px 3px;
   text-align: center;
   text-decoration: center;
   display: inline-block;
   font-size: 12px;
-  margin: 4px 2px;
+  margin: 2px 2px;
   cursor: pointer;
-  width:70%;
-
+  width:100%;
 }
 
 .button, .tabSetButton:active  {
@@ -127,6 +125,7 @@ legend{
   margin: 4px 2px;
   cursor: pointer;
   vertical-align: middle;
+  box-shadow: 0 2px #666;
 }
 
 .button:hover, .tabSetButton:hover, .optionsButton:hover {
