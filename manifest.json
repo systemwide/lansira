@@ -9,10 +9,18 @@
 	},
 
 	"browser_action": {
-		"default_icon": "images/launch.png",
+		"default_icon": {
+		"19": "images/lansira_19.png",
+		"38": "images/lansira_38.png"
+		},
 		"default_popup": "popup.html",
 		"default_title": "Lansira Tab Manager"
 	},
+
+	"icons": { 
+		"16": "images/lansira_16.png",
+        "48": "images/lansira_48.png",
+        "128": "images/lansira_128.png" },
 	
 	"optional_permissions": [
 		"tabs"
