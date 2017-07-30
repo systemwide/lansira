@@ -5,11 +5,11 @@ chrome.runtime.onInstalled.addListener(function loadDefaults(){
 
 	var defaultTabLists = 
 	{
-		"Work" : [ "http://www.slack.com", "http://www.salesforce.com", "http://www.apple.com" ],
+		"DefaultWork" : [ "http://www.slack.com", "http://www.salesforce.com", "http://www.github.com" ],
 
-		"School" : [ "https://my.uga.edu/", "https://piazza.com/", "https://www.wolframalpha.com/" ],
+		"DefaultSchool" : [ "https://www.khanacademy.org/", "https://piazza.com/", "https://www.wolframalpha.com/" ],
 
-		"Research" : [ "https://www.wikipedia.org/", "https://translate.google.com/", "https://www.thefreelibrary.com/" ]
+		"DefaultResearch" : [ "https://www.wikipedia.org/", "https://translate.google.com/", "https://www.thefreelibrary.com/" ]
 	};
 
 
@@ -22,7 +22,7 @@ chrome.runtime.onInstalled.addListener(function loadDefaults(){
 	var def = "defaultKeys";
 	
 	defaults[def] = defaultTabLists;
-	console.log(defaults);
+//	console.log(defaults);
 
 	storage.set(defaults, function(){ 
 		if (chrome.runtime.error) {
